@@ -116,17 +116,17 @@ class _SignInState extends State<SignIn> {
                                 width: 20,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(6),
-                                  border: Border.all(width: 1, color: AppColors.appTextColorTow),
+                                  border: Border.all(width: 2, color: AppColors.appTextColor),
                                 ),
+                                child: const Icon(Icons.check, size: 15),
                               )
                             : Container(
                                 height: 20,
                                 width: 20,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(6),
-                                  border: Border.all(width: 2, color: AppColors.appTextColor),
+                                  border: Border.all(width: 1, color: AppColors.appTextColorTow),
                                 ),
-                                child: const Icon(Icons.check, size: 15),
                               ),
                       ),
                     ),
@@ -160,6 +160,7 @@ class _SignInState extends State<SignIn> {
                     style: const TextStyle(color: AppColors.white, fontSize: 16, fontWeight: FontWeight.w600),
                   ),
                 ),
+                SizedBox(height: MediaQuery.of(context).size.height / 50),
                 Center(
                   child: AppButton(
                     image: AppAssets.google,
@@ -169,6 +170,9 @@ class _SignInState extends State<SignIn> {
                     title: AppStrings.signInWithGoogle,
                     style: const TextStyle(color: AppColors.black, fontSize: 16, fontWeight: FontWeight.w500),
                   ),
+                ),
+                RichText(
+                  text: TextSpan(),
                 ),
               ],
             ),
