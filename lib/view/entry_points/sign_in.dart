@@ -172,7 +172,7 @@ class _SignInState extends State<SignIn> {
                   ),
                 ),
                 RichText(
-                  text: TextSpan(),
+                  text: const TextSpan(),
                 ),
               ],
             ),
