@@ -13,4 +13,8 @@ class AppAssets {
 
   ///sign in -->
   static const String google = "${imageBasePath}google.png";
+
+  ///bottomBar -->
+// profile
+  static const String profile = "${imageBasePath}Group 185.png";
 }
