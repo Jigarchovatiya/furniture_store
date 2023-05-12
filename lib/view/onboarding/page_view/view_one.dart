@@ -16,7 +16,7 @@ class ViewOne extends StatelessWidget {
             height: MediaQuery.of(context).size.height / 2.4,
           ),
           SizedBox(
-            height: MediaQuery.of(context).size.height / 25,
+            height: MediaQuery.of(context).size.height / 20,
           ),
           const Text(
             textAlign: TextAlign.center,
@@ -24,7 +24,7 @@ class ViewOne extends StatelessWidget {
             style: TextStyle(
               fontWeight: FontWeight.w500,
               fontSize: 24,
-              color: AppColors.viewDetailColor,
+              color: AppColors.appTextColor,
             ),
           ),
         ],

@@ -18,6 +18,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
   Widget build(BuildContext context) {
     final PageController pageController = PageController(initialPage: 0);
     return Scaffold(
+      backgroundColor: AppColors.bgColor,
       body: SafeArea(
         child: Stack(
           children: [
@@ -25,7 +26,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               height: 30,
             ),
             Container(
-              margin: const EdgeInsets.only(top: 80),
+              margin: EdgeInsets.only(top: MediaQuery.of(context).size.height / 10),
               child: PageView(
                 controller: pageController,
                 children: const [
@@ -38,7 +39,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             Column(
               children: [
                 SizedBox(
-                  height: MediaQuery.of(context).size.height / 1.5,
+                  height: MediaQuery.of(context).size.height / 1.4,
                 ),
                 Center(
                   child: SmoothPageIndicator(
@@ -66,7 +67,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               onPressed: () {},
               child: const Text(
                 AppStrings.skip,
-                style: TextStyle(color: AppColors.skipColor, fontSize: 16, fontWeight: FontWeight.w400),
+                style: TextStyle(color: AppColors.appTextColorTow, fontSize: 16, fontWeight: FontWeight.w400),
               ),
             ),
             CircleAvatar(

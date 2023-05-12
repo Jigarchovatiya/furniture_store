@@ -10,4 +10,7 @@ class AppAssets {
   static const String chairOne = "${imageBasePath}chair_one.png";
   static const String chairTwo = "${imageBasePath}chair_two.png";
   static const String chairThree = "${imageBasePath}chair_three.png";
+
+  ///sign in -->
+  static const String google = "${imageBasePath}google.png";
 }

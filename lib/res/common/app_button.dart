@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:furniture_store/res/constant/app_colors.dart';
-import 'package:furniture_store/res/constant/app_strings.dart';
 
 class AppButton extends StatelessWidget {
-  const AppButton({Key? key}) : super(key: key);
+  final Color? color;
+  final double? height;
+  final String? title;
+  final String? image;
+  final TextStyle? style;
+
+  final VoidCallback? onTap;
+  const AppButton({Key? key, this.title, this.onTap, this.color, this.height, this.image, this.style}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,17 +16,23 @@ class AppButton extends StatelessWidget {
       height: 56,
       width: 327,
       decoration: BoxDecoration(
-        color: AppColors.themeColor,
+        color: color,
         borderRadius: BorderRadius.circular(14),
       ),
-      child: InkWell(
-        onTap: () {},
-        child: const Center(
-          child: Text(
-            AppStrings.buttonText,
-            style: TextStyle(color: AppColors.white, fontSize: 16, fontWeight: FontWeight.w600),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          image == null ? const SizedBox() : Image.asset(image!, height: height ?? 24),
+          InkWell(
+            onTap: () {},
+            child: Center(
+              child: Text(
+                title!,
+                style: style!,
+              ),
+            ),
           ),
-        ),
+        ],
       ),
     );
   }

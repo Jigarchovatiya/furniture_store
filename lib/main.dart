@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:furniture_store/view/onboarding/onboarding_screen.dart';
+import 'package:furniture_store/view/entry_points/sign_in.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       ),
       // routes: appRoutes,
       // initialRoute: RoutesName.splashScreen,
-      home: const OnBoardingScreen(),
+      home: const SignIn(),
     );
   }
 }
